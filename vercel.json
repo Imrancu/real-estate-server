@@ -9,7 +9,18 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "index.js"
+        "dest": "index.js",
+        "methods": [
+          "GET",
+          "HEAD",
+          "PATCH",
+          "POST",
+          "DELETE",
+          "OPTIONS"
+        ],
+        "headers": {
+          "Access-Control-Allow-Origin": "https://web-market-nu.vercel.app"
+        }
       }
     ]
   }

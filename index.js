@@ -20,7 +20,11 @@ mongoose
 const app = express();
 
 // Enable CORS for all routes
-app.use(cors());
+app.use(cors({
+  origin: 'https://realestate-830ed.web.app', // Replace with your Firebase Hosting domain
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTION',
+  credentials: true,
+}));
 
 app.use(express.json());
 
