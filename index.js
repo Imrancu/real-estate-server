@@ -21,7 +21,7 @@ const app = express();
 
 // Enable CORS for all routes
 app.use(cors({
-  origin: 'https://realestate-830ed.web.app', // Replace with your Firebase Hosting domain
+  origin: 'https://real-estate-drab-phi.vercel.app', // Replace with your Firebase Hosting domain
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTION',
   credentials: true,
 }));
