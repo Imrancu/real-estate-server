@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "./index.js",
+        "src": "index.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/",
+        "dest": "index.js",
         "methods": [
           "GET",
           "HEAD",
@@ -19,7 +19,7 @@
           "OPTIONS"
         ],
         "headers": {
-          "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Origin": "https://real-estate-drab-phi.vercel.app"
         }
       }
     ]
