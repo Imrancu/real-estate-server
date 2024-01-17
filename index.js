@@ -6,16 +6,10 @@ import userRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.route.js";
 import listingRouter from "./routes/listing.route.js";
 import cookieParser from "cookie-parser";
+import dbConnect from "./db/dbConnect.js";
 dotenv.config();
 
-mongoose
-  .connect(process.env.MONGO_URL)
-  .then(() => {
-    console.log("Connected to MongoDB!");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+dbConnect()
 
 const app = express();
 
